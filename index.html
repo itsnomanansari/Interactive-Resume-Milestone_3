@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Resume Builder</h1>
+
+        <!-- Form for user input -->
+        <form id="resume-form">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="tel" id="phone" placeholder="Phone" required>
+                <input type="file" id="profilePic" accept="image/*" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Education</legend>
+                <input type="text" id="education" placeholder="Education" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Work Experience</legend>
+                <input type="text" id="experience" placeholder="Work Experience" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Skills</legend>
+                <input type="text" id="skills" placeholder="Skills (comma separated)" required>
+            </fieldset>
+
+            <button type="submit">Generate Resume</button>
+        </form>
+
+        <!-- Section to display the generated resume -->
+        <section id="resume-display">
+            <div class="profile">
+                <img id="profile-pic-display" alt="Profile Picture">
+                <h2 id="name-display"></h2>
+                <p id="email-display"></p>
+                <p id="phone-display"></p>
+            </div>
+            <div class="resume-section">
+                <h3>Education</h3>
+                <p id="education-display"></p>
+            </div>
+            <div class="resume-section">
+                <h3>Work Experience</h3>
+                <p id="experience-display"></p>
+            </div>
+            <div class="resume-section">
+                <h3>Skills</h3>
+                <ul id="skills-display"></ul>
+            </div>
+        </section>
+    </div>
+
+    <script src="main.js" defer></script>
+</body>
+</html>
